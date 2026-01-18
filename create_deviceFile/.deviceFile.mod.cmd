@@ -1,0 +1,1 @@
+savedcmd_/home/lince/linux_kernel_programming/create_deviceFile/deviceFile.mod := printf '%s\n'   deviceFile.o | awk '!x[$$0]++ { print("/home/lince/linux_kernel_programming/create_deviceFile/"$$0) }' > /home/lince/linux_kernel_programming/create_deviceFile/deviceFile.mod

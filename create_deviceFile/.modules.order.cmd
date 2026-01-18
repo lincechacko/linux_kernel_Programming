@@ -1,0 +1,1 @@
+savedcmd_/home/lince/linux_kernel_programming/create_deviceFile/modules.order := {   echo /home/lince/linux_kernel_programming/create_deviceFile/deviceFile.o; :; } > /home/lince/linux_kernel_programming/create_deviceFile/modules.order
