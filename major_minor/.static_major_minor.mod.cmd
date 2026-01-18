@@ -1,0 +1,1 @@
+savedcmd_/home/lince/linux_kernel_development/major_minor/static_major_minor.mod := printf '%s\n'   static_major_minor.o | awk '!x[$$0]++ { print("/home/lince/linux_kernel_development/major_minor/"$$0) }' > /home/lince/linux_kernel_development/major_minor/static_major_minor.mod

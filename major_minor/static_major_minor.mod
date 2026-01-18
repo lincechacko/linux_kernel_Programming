@@ -1,0 +1,1 @@
+/home/lince/linux_kernel_development/major_minor/static_major_minor.o

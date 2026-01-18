@@ -1,0 +1,1 @@
+savedcmd_/home/lince/linux_kernel_development/major_minor/modules.order := {   echo /home/lince/linux_kernel_development/major_minor/static_major_minor.o; :; } > /home/lince/linux_kernel_development/major_minor/modules.order
