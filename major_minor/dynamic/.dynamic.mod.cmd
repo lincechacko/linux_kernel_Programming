@@ -1,0 +1,1 @@
+savedcmd_/home/lince/linux_kernel_development/major_minor/dynamic/dynamic.mod := printf '%s\n'   dynamic.o | awk '!x[$$0]++ { print("/home/lince/linux_kernel_development/major_minor/dynamic/"$$0) }' > /home/lince/linux_kernel_development/major_minor/dynamic/dynamic.mod

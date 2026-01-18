@@ -1,0 +1,1 @@
+savedcmd_/home/lince/linux_kernel_development/major_minor/dynamic/Module.symvers :=  scripts/mod/modpost -M        -o /home/lince/linux_kernel_development/major_minor/dynamic/Module.symvers -T /home/lince/linux_kernel_development/major_minor/dynamic/modules.order -i Module.symvers -e 

@@ -1,0 +1,1 @@
+savedcmd_/home/lince/linux_kernel_development/major_minor/dynamic/modules.order := {   echo /home/lince/linux_kernel_development/major_minor/dynamic/dynamic.o; :; } > /home/lince/linux_kernel_development/major_minor/dynamic/modules.order
