@@ -10,3 +10,6 @@ This project allows you to pass arguments to the kernel module and gives interru
 
 # 3.major_minor
 This project assigns the Major and Minor number for a device in static and dynamic mode.
+
+# 4.create_deviceFile
+Here we are creating a device based on the major and the minor number
