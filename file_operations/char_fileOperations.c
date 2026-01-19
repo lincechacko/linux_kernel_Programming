@@ -15,24 +15,24 @@ static struct cdev device_cdev;
 /*
 ** Function Prototypes
 */
-static int      __init etx_driver_init(void);
-static void     __exit etx_driver_exit(void);
-static int      etx_open(struct inode *inode, struct file *file);
-static int      etx_release(struct inode *inode, struct file *file);
-static ssize_t  etx_read(struct file *filp, char __user *buf, size_t len,loff_t * off);
-static ssize_t  etx_write(struct file *filp, const char *buf, size_t len, loff_t * off);
+static int      __init new_driver_init(void);
+static void     __exit new_driver_exit(void);
+static int      device_open(struct inode *inode, struct file *file);
+static int      device_release(struct inode *inode, struct file *file);
+static ssize_t  device_read(struct file *filp, char __user *buf, size_t len,loff_t * off);
+static ssize_t  device_write(struct file *filp, const char *buf, size_t len, loff_t * off);
 static struct file_operations fops =
 {
     .owner      = THIS_MODULE,
-    .read       = etx_read,
-    .write      = etx_write,
-    .open       = etx_open,
-    .release    = etx_release,
+    .read       = device_read,
+    .write      = device_write,
+    .open       = device_open,
+    .release    = device_release,
 };
 /*
 ** This function will be called when we open the Device file
 */
-static int etx_open(struct inode *inode, struct file *file)
+static int device_open(struct inode *inode, struct file *file)
 {
         pr_info("Driver Open Function Called...!!!\n");
         return 0;
@@ -40,7 +40,7 @@ static int etx_open(struct inode *inode, struct file *file)
 /*
 ** This function will be called when we close the Device file
 */
-static int etx_release(struct inode *inode, struct file *file)
+static int device_release(struct inode *inode, struct file *file)
 {
         pr_info("Driver Release Function Called...!!!\n");
         return 0;
@@ -48,7 +48,7 @@ static int etx_release(struct inode *inode, struct file *file)
 /*
 ** This function will be called when we read the Device file
 */
-static ssize_t etx_read(struct file *filp, char __user *buf, size_t len, loff_t *off)
+static ssize_t device_read(struct file *filp, char __user *buf, size_t len, loff_t *off)
 {
         pr_info("Driver Read Function Called...!!!\n");
         return 0;
@@ -56,7 +56,7 @@ static ssize_t etx_read(struct file *filp, char __user *buf, size_t len, loff_t 
 /*
 ** This function will be called when we write the Device file
 */
-static ssize_t etx_write(struct file *filp, const char __user *buf, size_t len, loff_t *off)
+static ssize_t device_write(struct file *filp, const char __user *buf, size_t len, loff_t *off)
 {
         pr_info("Driver Write Function Called...!!!\n");
         return len;
