@@ -1,0 +1,1 @@
+savedcmd_/home/lince/linux_kernel_programming/dummy_driver_usr_kernel/kernal_driver.mod := printf '%s\n'   kernal_driver.o | awk '!x[$$0]++ { print("/home/lince/linux_kernel_programming/dummy_driver_usr_kernel/"$$0) }' > /home/lince/linux_kernel_programming/dummy_driver_usr_kernel/kernal_driver.mod

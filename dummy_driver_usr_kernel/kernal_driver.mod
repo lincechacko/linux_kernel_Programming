@@ -1,0 +1,1 @@
+/home/lince/linux_kernel_programming/dummy_driver_usr_kernel/kernal_driver.o
