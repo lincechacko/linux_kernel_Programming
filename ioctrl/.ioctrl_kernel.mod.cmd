@@ -1,0 +1,1 @@
+savedcmd_/home/lince/linux_kernel_programming/ioctrl/ioctrl_kernel.mod := printf '%s\n'   ioctrl_kernel.o | awk '!x[$$0]++ { print("/home/lince/linux_kernel_programming/ioctrl/"$$0) }' > /home/lince/linux_kernel_programming/ioctrl/ioctrl_kernel.mod

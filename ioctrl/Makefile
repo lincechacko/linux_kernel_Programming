@@ -1,4 +1,4 @@
-obj-m := ioctl_kernel.o
+obj-m := ioctrl_kernel.o
 
 # KDIR points to the kernel source in your SDK
 KDIR := /home/lince/yocto_project/beagleBone/build/tmp/work/beaglebone_yocto-poky-linux-gnueabi/linux-yocto/6.6.21+git/linux-beaglebone_yocto-standard-build

@@ -20,13 +20,10 @@ int32_t value = 0;
 dev_t device;
 static struct class * device_class;
 static struct cdev device_cdev;
-static struct file_operartions fops;
 
 /*
 ** Function Prototypes
 */
-static int      __init etx_driver_init(void);
-static void     __exit etx_driver_exit(void);
 static int      device_open(struct inode *inode, struct file *file);
 static int      device_release(struct inode *inode, struct file *file);
 static ssize_t  device_read(struct file *filp, char __user *buf, size_t len,loff_t * off);
@@ -101,7 +98,7 @@ static long device_ioctl(struct file * file , unsigned int cmd , unsigned long a
         return 0;
 }
 
-static int __inti init_function(void)
+static int __init init_function(void)
 {
 	if(alloc_chrdev_region(&device,0,1,"chr_dev")<0)
 	{
