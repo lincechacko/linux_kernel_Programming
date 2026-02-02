@@ -1,1 +1,0 @@
-savedcmd_/home/lince/linux_kernel_programming/dummy_driver_usr_kernel/modules.order := {   echo /home/lince/linux_kernel_programming/dummy_driver_usr_kernel/kernal_driver.o; :; } > /home/lince/linux_kernel_programming/dummy_driver_usr_kernel/modules.order

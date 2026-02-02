@@ -143,6 +143,7 @@ static void __exit exit_function(void)
 	class_destroy(device_class);
 	cdev_del(&device_cdev);
 	unregister_chrdev_region(device , 1);
+	pr_info("Device Driver Remove...Done!!!\n");
 }
 
 
