@@ -1,0 +1,1 @@
+savedcmd_/home/lince/linux_kernel_programming/waitqueue/modules.order := {   echo /home/lince/linux_kernel_programming/waitqueue/waitqueue.o; :; } > /home/lince/linux_kernel_programming/waitqueue/modules.order

@@ -1,0 +1,1 @@
+savedcmd_/home/lince/linux_kernel_programming/waitqueue/waitqueue.ko := arm-poky-linux-gnueabi-ld -r -EL -z noexecstack --no-warn-rwx-segments --build-id=sha1  -T scripts/module.lds -o /home/lince/linux_kernel_programming/waitqueue/waitqueue.ko /home/lince/linux_kernel_programming/waitqueue/waitqueue.o /home/lince/linux_kernel_programming/waitqueue/waitqueue.mod.o;  true

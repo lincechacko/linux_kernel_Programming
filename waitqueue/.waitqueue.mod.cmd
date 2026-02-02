@@ -1,0 +1,1 @@
+savedcmd_/home/lince/linux_kernel_programming/waitqueue/waitqueue.mod := printf '%s\n'   waitqueue.o | awk '!x[$$0]++ { print("/home/lince/linux_kernel_programming/waitqueue/"$$0) }' > /home/lince/linux_kernel_programming/waitqueue/waitqueue.mod

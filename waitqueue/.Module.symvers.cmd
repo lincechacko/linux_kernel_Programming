@@ -1,0 +1,1 @@
+savedcmd_/home/lince/linux_kernel_programming/waitqueue/Module.symvers :=  scripts/mod/modpost -M        -o /home/lince/linux_kernel_programming/waitqueue/Module.symvers -T /home/lince/linux_kernel_programming/waitqueue/modules.order -i Module.symvers -e 
