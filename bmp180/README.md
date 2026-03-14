@@ -205,22 +205,6 @@ Pressure = 100842 Pa
 
 ---
 
-# I²C Verification
-
-Before running the driver, verify the device is detected on the I²C bus:
-
-```bash
-i2cdetect -y 2
-```
-
-Expected address:
-
-```
-77
-```
-
----
-
 # Key Linux Kernel Concepts Demonstrated
 
 This project demonstrates several core Linux driver development topics:
