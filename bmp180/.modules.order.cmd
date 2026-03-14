@@ -1,1 +1,0 @@
-savedcmd_/home/lince/linux_kernel_programming/bmp180/modules.order := {   echo /home/lince/linux_kernel_programming/bmp180/bmp180_driver.o; :; } > /home/lince/linux_kernel_programming/bmp180/modules.order

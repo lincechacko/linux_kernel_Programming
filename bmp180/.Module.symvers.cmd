@@ -1,1 +1,0 @@
-savedcmd_/home/lince/linux_kernel_programming/bmp180/Module.symvers :=  scripts/mod/modpost -M        -o /home/lince/linux_kernel_programming/bmp180/Module.symvers -T /home/lince/linux_kernel_programming/bmp180/modules.order -i Module.symvers -e 
