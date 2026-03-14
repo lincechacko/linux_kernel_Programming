@@ -14,7 +14,17 @@ The project demonstrates key **Embedded Linux driver development concepts**, inc
 * **User-space application** interacting with kernel driver
 
 The driver was tested on a **BeagleBone running a Yocto-based Linux kernel (6.6.x)**.
+## Driver Loaded
 
+![Driver Loaded](images/image1.png)
+
+## I2C Device Detection
+
+![I2C Detect](images/image2.png)
+
+## User Application Output
+
+![Program Output](images/image3.png)
 ---
 
 ## Sensor
