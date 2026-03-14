@@ -34,16 +34,25 @@ static struct file_operations fops =
     .release    = bmp180_release,
 };
 
+
+/*
+** @brief function when we open the Device file
+*/
 static int bmp180_open(struct inode *inode, struct file *file)
 {
 	return 0;
 }
-
+/**
+ * @brief function when we close the device file
+ */
 static int  bmp180_release(struct inode *inode, struct file *file)
 {
 	return 0;
 }
 
+/*
+ * @brief function will be called when we read the device file
+ * */
 static ssize_t bmp180_read(struct file *filp ,  char __user *read_buffer, size_t len , loff_t *off)
 {
     uint8_t data[32] = {0};
@@ -62,6 +71,9 @@ static ssize_t bmp180_read(struct file *filp ,  char __user *read_buffer, size_t
     return len;
 }
 
+/*
+ * @brief function is called when we write the device file
+ * */
 static ssize_t bmp180_write(struct file *filp , const char __user *write_buffer , size_t len , loff_t *off )
 {
     uint8_t data[10] = {0};
@@ -92,8 +104,6 @@ MODULE_DEVICE_TABLE(i2c , bmp180_id);
 static int bmp180_probe(struct i2c_client *client)
 {
     uint8_t data = 0;
-
-    i2c_client_bmp180 = client;
 
     data = i2c_smbus_read_byte_data(client, 0xD0);
 
