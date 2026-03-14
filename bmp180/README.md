@@ -270,17 +270,12 @@ Kernel:
 Linux 6.6.x
 ```
 
----
+## Inspiration / Credits
 
-# License
+This project was inspired by the excellent Linux device driver tutorials from  
+EmbeTronicX. Their tutorials helped in understanding the Linux I2C subsystem  
+and character device driver implementation.
 
-This project is released under the **GPL License**.
-
----
-
-# Author
-
-Lince Kuruvila Chacko
-
-Embedded Linux Developer
+Reference:
+https://embetronicx.com/
 
