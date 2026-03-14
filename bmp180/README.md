@@ -281,5 +281,6 @@ This project is released under the **GPL License**.
 # Author
 
 Lince Kuruvila Chacko
+
 Embedded Linux Developer
 
