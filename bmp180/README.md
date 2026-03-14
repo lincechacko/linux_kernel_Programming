@@ -28,13 +28,6 @@ Capabilities of the sensor:
 * Digital I²C interface
 * On-chip calibration constants
 
-Typical applications include:
-
-* Altitude measurement
-* Weather monitoring
-* Environmental sensing
-* Embedded IoT devices
-
 ---
 
 # Project Structure
@@ -150,7 +143,7 @@ insmod bmp180_driver.ko
 Verify driver initialization:
 
 ```bash
-dmesg
+dmesg | tail
 ```
 
 Expected output:
@@ -269,18 +262,6 @@ Linux 6.6.x
 
 ---
 
-# Future Improvements
-
-Possible improvements to the driver include:
-
-* Implement **temperature and pressure calculations inside the kernel**
-* Add **sysfs interface**
-* Convert driver to use the **IIO subsystem**
-* Add **Device Tree support**
-* Implement **interrupt-based sampling**
-
----
-
 # License
 
 This project is released under the **GPL License**.
@@ -289,6 +270,6 @@ This project is released under the **GPL License**.
 
 # Author
 
-Lince
+Lince Kuruvila Chacko
 Embedded Linux Developer
 
