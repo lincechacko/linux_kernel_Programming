@@ -9,6 +9,7 @@
 #include <linux/err.h>
 #include <linux/cdev.h>
 #include <linux/device.h>
+#include <linux/uaccess.h>
 
 #define I2C_BUS_AVAILABLE            2                    /*i2c bus number*/
 #define I2C_DEVICE_NAME              "BMP180"             /*device name*/
@@ -45,14 +46,32 @@ static int  bmp180_release(struct inode *inode, struct file *file)
 
 static ssize_t bmp180_read(struct file *filp ,  char __user *read_buffer, size_t len , loff_t *off)
 {
-	i2c_master_recv(i2c_client_bmp180 , read_buffer , len);
-	return 0;
+    uint8_t data[32] = {0};
+    int ret;
+
+    if(len > sizeof(data))
+        len = sizeof(data);
+
+    ret = i2c_master_recv(i2c_client_bmp180, data, len);
+    if(ret < 0)
+        return ret;
+
+    if(copy_to_user(read_buffer, data, len))
+        return -EFAULT;
+
+    return len;
 }
 
 static ssize_t bmp180_write(struct file *filp , const char __user *write_buffer , size_t len , loff_t *off )
 {
-	i2c_master_send(i2c_client_bmp180 , write_buffer, len);
-	return 0;
+    uint8_t data[10] = {0};
+
+    if(copy_from_user(data, write_buffer, len))
+        return -EFAULT;
+
+    i2c_master_send(i2c_client_bmp180, data, len);
+
+    return len;
 }
 
 /*
@@ -73,11 +92,16 @@ MODULE_DEVICE_TABLE(i2c , bmp180_id);
 static int bmp180_probe(struct i2c_client *client)
 {
     uint8_t data = 0;
-    data = i2c_smbus_read_byte_data(i2c_client_bmp180, 0xD0);
+
+    i2c_client_bmp180 = client;
+
+    data = i2c_smbus_read_byte_data(client, 0xD0);
+
     if(data == 0x55)
-    {
-    	pr_info("bmp180 Probed!!!\n");
-    }
+        pr_info("BMP180 detected\n");
+    else
+        return -ENODEV;
+
     return 0;
 }
 
